@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login | Apexvalue</title>
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <div class="navbar">
+      <div class="cotainer flex">
+        <h1 class="logo"> <a href="index.html"> <img src="images/logos/logo_down.jpg" alt="APEXVALUE"> </a></h1>
+        <nav>
+          <ul>
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="about.html">About</a> </li>
+            <li> <a href="policy.html">Policy</a> </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+<!-- login form -->
+<section>
+<div class="login-form">
+  <form class="form" action="includes/login.inc.php" id="login" method="post">
+  <div class="login-box">
+    <h1 class="form-title">Secure Sign In</h1>
+    <div class="form-message form-message-error"></div>
+    <div class="form-control">
+      <i class="fa-solid fa-lock"></i>
+      <label>Username/ Email</label>
+      <input type="text" name="uid" class="form-input" id="username" autofocus placeholder="Enter Username/ Email" autocomplete="on">
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Error message</small>
+    </div>
+
+
+    <div class="form-control">
+      <i class="fa-solid fa-lock"></i>
+      <label>Password</label>
+      <input type="password" name="pwd" class="form-input" id="password" autofocus placeholder=" Enter your Password" autocomplete="off">
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Error message</small>
+    </div>
+    <input  class="btn" type="submit" name="" value="Login">
+    <div class="form-link">
+      <p><a href="#" class="form-link"> Forgot Password?</a></p>
+      <p><a href="signup.html"> Dont't have an account yet? Sign Up</a></p>
+    </div>
+  </div>
+  </form>
+</div>
+</section>
+  <!--footer-->
+  <div class="foot">
+            <p><small>Copyright &copy; Apexvalue 2020</small></p>
+            <small>All Rights Reserved</small>
+        </div>
+  </body>
+</html>

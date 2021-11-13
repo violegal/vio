@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<!-- <?php
+session_start();
+ ?> -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/login.css"> -->
+    <title>Signup | Apexvalue</title>
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <div class="navbar">
+      <div class="cotainer flex">
+        <h1 class="logo"> <a href="index.html"> <img src="images/logos/logo_down.jpg" alt="APEXVALUE"> </a></h1>
+        <nav>
+          <ul>
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="about.html">About</a> </li>
+            <li> <a href="policy.html">Policy</a> </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+<!-- signup form -->
+<section class="container-form">
+<div class="login-form">
+  <form class="form" action="includes/signup.inc.php" id="form" method="POST">
+    <!-- <div class="alert">
+        <?php
+          if (isset($_SESSION['status']))
+          {
+            echo "<h4>".$_SESSION[status]."</h4>";
+            unset($_SESSION['status']);
+          }
+        ?>
+    </div> -->
+  <div class="login-box">
+    <h1 class="form-title">Create Account</h1>
+    <div class="form-message form-message-error"></div>
+    <div class="form-control">
+      <i class="fa-solid fa-user"></i>
+      <label>Full Name</label>
+
+      <input type="text" class="form-input" name="Name" id="name" autofocus placeholder="Enter your full name" autocomplete="off" required>
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Please Enter your full name</small>
+    </div>
+
+    <div class="form-control">
+      <i class="fa-solid fa-user"></i>
+      <label>Username</label>
+      <input type="text" name="Uid" class="form-input" id="username" autofocus placeholder="Choose a username" autocomplete="off" required>
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Username cannot contain special characters</small>
+    </div>
+
+    <div class="form-control">
+      <i class="fa-solid fa-user"></i>
+      <label>Phone Number</label>
+      <br>
+      <select class="form-input" name="phone" id="phone">
+        <option selected hidden value="select">Select Code</option>
+        <option value="385">385</option>
+        <option value="357">357</option>
+        <option value="45">45</option>
+        <option value="33">33</option>
+        <option value="49">49</option>
+        <option value="1">1</option>
+        <option value="32">32</option>
+        <option value="55">55</option>
+        <option value="359">359</option>
+        <option value="213">213</option>
+        <option value="86">86</option>
+        <option value="91">91</option>
+        <option value="39">39</option>
+        <option value="81">81</option>
+        <option value="352">352</option>
+        <option value="52">52</option>
+        <option value="377">377</option>
+        <option value="31">31</option>
+        <option value="64">64</option>
+        <option value="227">227</option>
+        <option value="507">507</option>
+        <option value="595">595</option>
+        <option value="351">351</option>
+        <option value="221">221</option>
+        <option value="232">232</option>
+        <option value="34">34</option>
+        <option value="46">46</option>
+        <option value="41">41</option>
+        <option value="44">44</option>
+        <option value="598">598</option>
+      </select>
+      <input type="phone" name="phone" class="form-input" id="phone" required>
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+    </div>
+
+
+    <div class="form-control">
+      <i class="fa-solid fa-envelope"></i>
+      <label>Email</label>
+
+      <input type="text" name="Email" class="form-input" id="email" autofocus placeholder="Enter your Email" autocomplete="off" required>
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Enter a valid Email</small>
+    </div>
+
+    <div class="form-control">
+      <i class="fa-solid fa-lock"></i>
+      <label>Password</label>
+      <input type="password" name="Pwd" class="form-input" id="password" autofocus placeholder="Set up a login Password" autocomplete="off" required>
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Must be 8-20 characters long</small>
+      <div class="col-auto">
+      <span id="passwordHelpInline" class="form-text">
+        Must be 8-20 characters long.
+      </span>
+    </div>
+    </div>
+
+    <div class="form-control">
+      <i class="fa-solid fa-lock"></i>
+      <label>Confirm Password</label>
+      <input type="password" name="Pwdrepeat" class="form-input" id="cpassword" autofocus placeholder="Repeat password" autocomplete="off" required>
+      <i class="fas fa-check-circle"></i>
+      <i class="fas fa-exclamation-circle"></i>
+      <small>Passwords don't match</small>
+    </div>
+
+
+<div>
+  <input  class="btn" type="submit" name="submit" value="Submit">
+    <div class="form-link">
+      <p><a href="login.html"> Already have an Account? Sign In</a></p>
+    </div>
+  </div>
+    </div>
+  </form>
+</div>
+</section>
+  <!--footer-->
+  <div class="foot">
+            <p><small>Copyright &copy; Apexvalue 2020</small></p>
+            <small>All Rights Reserved</small>
+        </div>
+  </body>
+</html>

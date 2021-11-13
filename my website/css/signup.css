@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --myfont: 'Montserrat', sans-serif;;
+  --my-btn-fonts: 'Montserrat', sans-serif;
+  --lg-lightcolor: linear-gradient(to left, #75cfff, #1175ab) ;
+  --lg-color: linear-gradient(to left, #c8cdcf, #6e7070);
+  --primary-color:#fff;
+  --color-primary-dark:#919191 ;
+  --color-secondary:#3b48ff ;
+  --color-error: #e60013;
+  --color-success: #00f508;
+  --color-primary-deep:#696b69;
+  --border-radius: 4px ;
+}
+
+/* body{
+  background-image: var(--lg-color);
+  background-size: 100%;
+  background-repeat:no-repeat;
+  font-family: var(--myfont);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+} */
+.navbar{
+  background-color: #fff;
+  color: #333;
+  height: 70px;
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  box-shadow: #b4becb;
+  padding: 40px;
+  z-index: 100;
+}
+
+.navbar ul{
+  display: flex;
+}
+.navbar a{
+  color: #141859;
+  padding: 10px;
+  margin: 0 5px;
+}
+.navbar a:hover{
+  border-bottom: 2px #333 solid;
+}
+.navbar .flex{
+    justify-content: space-between;
+}
+.logo a:hover{
+  border: none;
+}
+.nav-link{
+  aria-haspopup:true;
+  data-toggle: dropdown;
+  aria-expanded;
+
+}
+/* .container-form{
+  background-size: 100%;
+  background-repeat:no-repeat;
+  font-family: var(--myfont);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+} */
+
+section{
+  margin:0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image:  url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* opacity: 0.5; */
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-bottom: 10px;
+}
+
+
+.login-form{
+  margin-top: 20px;
+  margin: 1rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),0 12. ;
+  overflow: hidden;
+  width: calc(100vw - 40vw);
+  max-width: 100%;
+}
+
+
+.login-box{
+  padding: 10px;
+
+}
+
+.form-control{
+  margin-bottom: 30px;
+  position: relative;
+
+}
+.form-control label{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.form-control input{
+  width: 100%;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  display: block;
+  font-family: var(--my-font);
+  font-size: 14px;
+  padding: 12px;
+}
+
+.form-control input:focus{
+  outline: 0;
+  border-color: #777;
+
+}
+.form-control .success input{
+  border-color: #00de1e;
+
+}
+
+
+.col-auto{
+  font-size: 12px;
+  margin-top: 0;
+}
+
+
+.form-control .error input{
+  border-color: #de0000;
+}
+
+.form-control i{
+  position: absolute;
+  right: 8px;
+  top:38px;
+  visibility: hidden;
+}
+
+
+.form-control.success i.fa-check-circle{
+  color:#00de1e ;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+  color: #de0000 ;
+  visibility: visible;
+}
+
+
+.form-control small{
+  color:#de0000;
+  position: absolute;
+  margin-bottom: 30px;
+  left: 0;
+  visibility: hidden;
+
+
+}
+
+.form-control.error small{
+  visibility: visible;
+
+}
+
+
+
+.form-title{
+  background: var(--lg-color);
+  padding: 30px 0;
+  margin-top: 5px;
+
+}
+.form-title{
+  color: #222;
+  font-family: var(--my-btn-font);
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.form .btn{
+  background: var(--lg-color);
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: #fff;
+  display: block;
+  font-family: var(--my-btn-font);
+  font-size: 16px;
+  padding: 15px 0;
+  margin-top: 20px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 1s ease;
+}
+.form .btn :hover{
+  background: linear-gradient(to right,#afb2b3 ,#c8cdcf);
+}
+
+/* tablets and under */
+@media(max-width:768px){
+  .container-form{
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.login-form{
+  width: calc(100vw - 35vw);
+}
+
+
+
+
+.form-link a{
+  color:#2483ff ;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  /* align-content: center; */
+}
+
+.form-link a:hover{
+  text-decoration: underline;
+
+}
+
+
+
+/* footer */
+/* footer{
+  margin: 2px;
+} */
+.footer .social a{
+  margin:0 10px;
+}
